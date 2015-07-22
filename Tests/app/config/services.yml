@@ -1,0 +1,8 @@
+parameters:
+    google_client_id: hello
+    google_client_secret: world
+
+services:
+    awy.google.youtube:
+        class: Awy\GoogleApiBundle\Client\YoutubeClient
+        arguments: ["%google_client_id%", "%google_client_secret%"]
