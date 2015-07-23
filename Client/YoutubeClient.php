@@ -16,5 +16,8 @@ class YoutubeClient extends GoogleClient
         $this->service = new \Google_Service_YouTube($this->client);
     }
 
-
+    public function getService()
+    {
+        return $this->service;
+    }
 }

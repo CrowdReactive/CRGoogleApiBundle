@@ -39,11 +39,17 @@ abstract class GoogleClient
      */
     public function setAccessToken($accessToken)
     {
-        $token = array(
-            'access_token' => $accessToken,
-        );
-
-        $this->token = json_encode($token);
+        if (is_null($accessToken)) {
+            $this->token = null;
+        } else {
+            $token = array('access_token' => $accessToken);
+            $this->token = json_encode($token);
+        }
         $this->client->setAccessToken($this->token);
+    }
+
+    public function setScopes($scopes)
+    {
+        $this->client->setScopes($scopes);
     }
 }
