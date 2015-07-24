@@ -1,0 +1,21 @@
+awy_google_api:
+
+    google_client_id: xxxx
+    google_client_secret: xxxx
+
+    redirect_uri:              # optional
+
+    # Simple API access key, also from the API console. Ensure you get
+    # a Server key, and not a Browser key.
+    developer_key:              # optional
+
+    hd:                         # optional
+    prompt:                     # optional
+    openid.realm:               # optional
+    include_granted_scopes:     # optional
+    login_hint:                 # optional
+    request_visible_actions:    # optional
+
+    access_type:                offline
+    approval_prompt:            auto
+    federated_signon_certs_url: https://www.googleapis.com/oauth2/v1/certs

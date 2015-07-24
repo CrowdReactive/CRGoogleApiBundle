@@ -9,9 +9,9 @@ class YoutubeClient extends GoogleClient
      */
     protected $service;
 
-    public function __construct($oauthClientId, $oauthClientSecret)
+    public function __construct($oauthClientId, $oauthClientSecret, $oAuthConfig = array())
     {
-        parent::__construct($oauthClientId, $oauthClientSecret);
+        parent::__construct($oauthClientId, $oauthClientSecret, $oAuthConfig);
 
         $this->service = new \Google_Service_YouTube($this->client);
     }

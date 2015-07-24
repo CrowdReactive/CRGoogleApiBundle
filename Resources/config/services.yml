@@ -1,0 +1,4 @@
+services:
+  awy.google.youtube:
+    class: Awy\GoogleApiBundle\Client\YoutubeClient
+    arguments: ["%awy_google_client_id%", "%awy_google_client_secret%", "%awy_oauth_config%"]

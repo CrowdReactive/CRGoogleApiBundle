@@ -11,3 +11,8 @@ This bundle is not ready for use yet.
         awy.google.youtube:
             class: Awy\GoogleApiBundle\Client\YoutubeClient
             arguments: ["%google_client_id%", "%google_client_secret%"]
+
+
+In your config:
+
+
