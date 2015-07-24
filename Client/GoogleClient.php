@@ -19,11 +19,14 @@ abstract class GoogleClient
      */
     protected $token;
 
-    public function __construct($oauthClientId, $oauthClientSecret)
+    public function __construct($oauthClientId, $oauthClientSecret, $oAuthConfig = array())
     {
         $this->client = new \Google_Client();
+
+        $this->client->setClassConfig('Google_Auth_OAuth2', $oAuthConfig);
         $this->client->setClientId($oauthClientId);
         $this->client->setClientSecret($oauthClientSecret);
+
     }
 
     /**
